@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        
+        Destroy(GameObject.Find("RifleGun"));
+        GetComponent<PlayerMovement>().Freeze();
+
         GameManager.Instance.GameOver();
     }
 }

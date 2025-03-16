@@ -7,6 +7,9 @@ public class EnemyManager : MonoBehaviour
 
     private int enemyCount;
     [SerializeField] private Text enemyCountDisplay;
+    
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip enemyDeadAudioClip;
 
 
     private void Awake()
@@ -20,6 +23,8 @@ public class EnemyManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -39,6 +44,8 @@ public class EnemyManager : MonoBehaviour
         enemyCount -= 1;
         enemyCountDisplay.text = enemyCount.ToString();
         EnemyCountCheck();
+
+        audioSource.PlayOneShot(enemyDeadAudioClip);
     }
 
 

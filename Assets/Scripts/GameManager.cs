@@ -23,14 +23,20 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("Gameplay");
+        StartCoroutine(GameOverDelay());
     }
 
     public void GameWin()
     {
-        Cursor.lockState = CursorLockMode.None;
         StartCoroutine(GameWinDelay());
     }
+
+    private IEnumerator GameOverDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Gameplay");
+    }
+
 
     private IEnumerator GameWinDelay()
     {

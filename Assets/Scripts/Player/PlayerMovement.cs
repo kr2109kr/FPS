@@ -63,4 +63,9 @@ public class PlayerMovement : MonoBehaviour
 
         lastPosition = transform.position;
     }
+
+    public void Freeze()
+    {
+        speed = 0;
+    }
 }
