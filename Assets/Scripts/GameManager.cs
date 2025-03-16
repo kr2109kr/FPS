@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,6 +29,12 @@ public class GameManager : MonoBehaviour
     public void GameWin()
     {
         Cursor.lockState = CursorLockMode.None;
+        StartCoroutine(GameWinDelay());
+    }
+
+    private IEnumerator GameWinDelay()
+    {
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Win");
     }
 
