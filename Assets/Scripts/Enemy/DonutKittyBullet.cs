@@ -26,6 +26,17 @@ public class DonutKittyBullet : MonoBehaviour
             other.GetComponent<Player>().TakeDamage(damage);
             Destroy(gameObject);
         }
+
+        else if (other.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
+
+        else if (other.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 

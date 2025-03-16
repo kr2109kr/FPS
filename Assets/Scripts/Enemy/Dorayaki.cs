@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Dorayaki : Enemy
 {
-    [SerializeField] private float radius;
+    [SerializeField] private float radius_1;
+    [SerializeField] private float radius_2;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private int damage;
     [SerializeField] private float detonationTimer;
@@ -20,9 +21,10 @@ public class Dorayaki : Enemy
 
     private void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius, layerMask);
 
-        if (hitColliders.Length != 0)
+        Collider[] hitColliders_2 = Physics.OverlapSphere(transform.position, radius_2, layerMask);
+
+        if (hitColliders_2.Length != 0)
         {
             if (!isDetonated)
             {
@@ -53,11 +55,11 @@ public class Dorayaki : Enemy
         GetComponent<MeshRenderer>().enabled = false;
 
         isDetonated = true;
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius, layerMask);
+        Collider[] hitColliders_2 = Physics.OverlapSphere(transform.position, radius_2, layerMask);
         
-        if (hitColliders.Length != 0)
+        if (hitColliders_2.Length != 0)
         {
-            hitColliders[0].GetComponent<Player>().TakeDamage(damage);
+            hitColliders_2[0].GetComponent<Player>().TakeDamage(damage);
         }
 
     }

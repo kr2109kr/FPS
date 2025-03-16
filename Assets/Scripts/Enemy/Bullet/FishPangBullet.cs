@@ -19,5 +19,10 @@ public class FishPangBullet : MonoBehaviour
             collision.gameObject.GetComponent<Player>().TakeDamage(damage);
             Destroy(gameObject);
         }
+
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

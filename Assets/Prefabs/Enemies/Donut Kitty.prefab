@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 353187443416286917}
   - component: {fileID: 5591101724690728913}
   - component: {fileID: 8729953809763415475}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8667902786077504404}
   - component: {fileID: 8834295497831155594}
   - component: {fileID: 5869347347443899897}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 1154831318209577903}
   - component: {fileID: 6107174455497746755}
   - component: {fileID: 5129411879100586524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Implosion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5072,7 +5072,7 @@ GameObject:
   - component: {fileID: 7393903379960196334}
   - component: {fileID: 8375390301198562124}
   - component: {fileID: 3168025645010087430}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5147,7 +5147,7 @@ GameObject:
   - component: {fileID: 2570341562626243355}
   - component: {fileID: 2319035255990172575}
   - component: {fileID: 3473235992940758533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10040,7 +10040,9 @@ GameObject:
   - component: {fileID: 5545280116319107986}
   - component: {fileID: 3965961272364918674}
   - component: {fileID: 3030085419136043098}
-  m_Layer: 0
+  - component: {fileID: 4413099795423891448}
+  - component: {fileID: 8244912852504170436}
+  m_Layer: 8
   m_Name: Donut Kitty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10055,7 +10057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5310254324140908112}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.85, z: 0}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 1
@@ -10161,6 +10163,57 @@ MonoBehaviour:
   chargeEffect: {fileID: 6107174455497746755}
   firePoint: {x: 0, y: 0.7, z: 0}
   bullerPrefab: {fileID: 432361751434317972, guid: cc6f3900b1be1e841bdc6b244d5b52fb, type: 3}
+--- !u!114 &4413099795423891448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5310254324140908112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd504db81bfeb764a9a7659a4b020a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 8244912852504170436}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  health: 0
+  walkPoint: {x: -1.04, y: 1.458, z: -29.9996}
+  walkPointRange: 5
+  timeBetweenAttacks: 0
+  projectile: {fileID: 0}
+  sightRange: 20
+  attackRange: 20
+  playerInSightRange: 0
+  playerInAttackRange: 0
+--- !u!195 &8244912852504170436
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5310254324140908112}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.010343461
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.04522397
+  m_BaseOffset: 0.022611985
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7586779195018156236
 GameObject:
   m_ObjectHideFlags: 0
@@ -10172,7 +10225,7 @@ GameObject:
   - component: {fileID: 9057419561151951026}
   - component: {fileID: 6950449721393784328}
   - component: {fileID: 4496841708622003627}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}

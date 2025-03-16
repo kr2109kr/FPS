@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3289563191329813849}
   - component: {fileID: 431072139350934983}
   - component: {fileID: 7470343348889841335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4852,7 +4852,7 @@ GameObject:
   - component: {fileID: 2454764019598324859}
   - component: {fileID: 5059128752780410308}
   - component: {fileID: 3124640394191276490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9743,7 +9743,7 @@ GameObject:
   - component: {fileID: 7340544291521964824}
   - component: {fileID: 8811127959919376665}
   - component: {fileID: 9051173277125466103}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14634,7 +14634,7 @@ GameObject:
   - component: {fileID: 2622969381409816965}
   - component: {fileID: 7050862834622537651}
   - component: {fileID: 6854176490387937896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Lightning_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19470,7 +19470,7 @@ GameObject:
   - component: {fileID: 7902681290004495875}
   - component: {fileID: 6864131111247162418}
   - component: {fileID: 2645503009369653791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24361,7 +24361,7 @@ GameObject:
   - component: {fileID: 8561296236731926379}
   - component: {fileID: 211131038725121532}
   - component: {fileID: 3183499272755459465}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24439,7 +24439,9 @@ GameObject:
   - component: {fileID: 2730585378236738585}
   - component: {fileID: 3844193534458310757}
   - component: {fileID: 2156740692309211925}
-  m_Layer: 0
+  - component: {fileID: 6262676834770447346}
+  - component: {fileID: 26353021918522097}
+  m_Layer: 8
   m_Name: FishPang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24454,7 +24456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4531747808411291084}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.02, y: 0, z: -35.6}
   m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 1
@@ -24567,6 +24569,57 @@ CapsuleCollider:
   m_Height: 0.032598242
   m_Direction: 1
   m_Center: {x: 0, y: 0.016299121, z: 0.000138029}
+--- !u!114 &6262676834770447346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4531747808411291084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd504db81bfeb764a9a7659a4b020a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  health: 0
+  walkPoint: {x: -1.04, y: 1.458, z: -29.9996}
+  walkPointRange: 5
+  timeBetweenAttacks: 0
+  projectile: {fileID: 0}
+  sightRange: 30
+  attackRange: 30
+  playerInSightRange: 0
+  playerInAttackRange: 0
+--- !u!195 &26353021918522097
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4531747808411291084}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.008966372
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.065196484
+  m_BaseOffset: 0.032598242
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5613057994603507716
 GameObject:
   m_ObjectHideFlags: 0
@@ -24578,7 +24631,7 @@ GameObject:
   - component: {fileID: 2057499014261025686}
   - component: {fileID: 3426814211284400827}
   - component: {fileID: 1117727508374687554}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24655,7 +24708,7 @@ GameObject:
   - component: {fileID: 1248055934669503614}
   - component: {fileID: 8094484481778334369}
   - component: {fileID: 7954055160316465784}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24769,7 +24822,7 @@ GameObject:
   - component: {fileID: 1209224960907688537}
   - component: {fileID: 3281071675325237968}
   - component: {fileID: 1008595696936939761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29661,7 +29714,7 @@ GameObject:
   - component: {fileID: 622631661731858696}
   - component: {fileID: 5393951755250411616}
   - component: {fileID: 3100400292335972802}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

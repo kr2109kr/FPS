@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8688567563814111606}
   - component: {fileID: 4624171112773739966}
   - component: {fileID: 7675744043883120661}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 287381936598961527}
   - component: {fileID: 7462013516588609646}
   - component: {fileID: 7032189048255086622}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,9 @@ GameObject:
   - component: {fileID: 3723921710042691361}
   - component: {fileID: 4289405107954690681}
   - component: {fileID: 8612577746441675159}
-  m_Layer: 0
+  - component: {fileID: 831718229087183217}
+  - component: {fileID: 4739563190692579321}
+  m_Layer: 8
   m_Name: Dorayaki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2931556799831742196}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03126655, y: 0.70641524, z: 0.70641524, w: 0.03126655}
+  m_LocalRotation: {x: -0.03126899, y: 0.7064151, z: 0.7064151, w: 0.03126899}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_ConstrainProportionsScale: 1
@@ -292,7 +294,8 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   healthBar: {fileID: 7675744043883120661}
-  radius: 5
+  radius_1: 10
+  radius_2: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -323,6 +326,57 @@ CapsuleCollider:
   m_Height: 0.020313097
   m_Direction: 1
   m_Center: {x: 0, y: -0.00000011920929, z: 0}
+--- !u!114 &831718229087183217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931556799831742196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd504db81bfeb764a9a7659a4b020a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 4739563190692579321}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  health: 0
+  walkPoint: {x: -1.04, y: 1.458, z: -29.9996}
+  walkPointRange: 5
+  timeBetweenAttacks: 0
+  projectile: {fileID: 0}
+  sightRange: 20
+  attackRange: 20
+  playerInSightRange: 0
+  playerInAttackRange: 0
+--- !u!195 &4739563190692579321
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931556799831742196}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.032212675
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.020313097
+  m_BaseOffset: 0.010156549
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3221004397156926951
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +388,7 @@ GameObject:
   - component: {fileID: 6188084026508733601}
   - component: {fileID: 859814278450962962}
   - component: {fileID: 6084841746649490861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5225,7 +5279,7 @@ GameObject:
   - component: {fileID: 6492784561237638258}
   - component: {fileID: 1695262828819017739}
   - component: {fileID: 1242645799189376763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Heal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10064,7 +10118,7 @@ GameObject:
   - component: {fileID: 104541686855210620}
   - component: {fileID: 3502862320068616356}
   - component: {fileID: 2437703264254692980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14955,7 +15009,7 @@ GameObject:
   - component: {fileID: 6366842790326937361}
   - component: {fileID: 1661406447614756297}
   - component: {fileID: 5189335991069788442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BrightHold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19846,7 +19900,7 @@ GameObject:
   - component: {fileID: 5982997445039780701}
   - component: {fileID: 6367708400743414274}
   - component: {fileID: 4668932812171788808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24737,7 +24791,7 @@ GameObject:
   - component: {fileID: 3076172525012190028}
   - component: {fileID: 3532876637382132567}
   - component: {fileID: 2284136807049329721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: vfx_Impact_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29631,7 +29685,7 @@ GameObject:
   - component: {fileID: 5511508577213977959}
   - component: {fileID: 5002674293521596238}
   - component: {fileID: 3978658621115665521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Darkback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34522,7 +34576,7 @@ GameObject:
   - component: {fileID: 7135458831158200398}
   - component: {fileID: 3489723042442299672}
   - component: {fileID: 5789301537346244767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39413,7 +39467,7 @@ GameObject:
   - component: {fileID: 1323297657249691140}
   - component: {fileID: 183017197058473586}
   - component: {fileID: 1514970275212778738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44304,7 +44358,7 @@ GameObject:
   - component: {fileID: 2993608062888747624}
   - component: {fileID: 3959261694453081835}
   - component: {fileID: 4945797488758932354}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44382,7 +44436,7 @@ GameObject:
   - component: {fileID: 7098123809637985783}
   - component: {fileID: 2234109543764626416}
   - component: {fileID: 9207229291098387736}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44496,7 +44550,7 @@ GameObject:
   - component: {fileID: 5211810619572220037}
   - component: {fileID: 1737466867273693874}
   - component: {fileID: 5134589746666687470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
