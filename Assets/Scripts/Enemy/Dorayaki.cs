@@ -40,6 +40,7 @@ public class Dorayaki : Enemy
         {
             if (detonationEffect.isStopped)
             {
+                Die();
                 Destroy(gameObject);
             }
         }

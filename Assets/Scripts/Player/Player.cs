@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            
+            Die();
         }
         slider.value = currentHealth;
     }
@@ -36,6 +36,6 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        
+        GameManager.Instance.GameOver();
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,12 +22,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        SceneManager.LoadScene("Gameplay");
     }
 
-    public void NewGame()
+    public void GameWin()
     {
-
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Win");
     }
 
 }

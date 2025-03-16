@@ -15,7 +15,7 @@ public class FishPang : Enemy
 
 
 
-    void Start()
+    private void Start()
     {
         base.currentHealth = base.maxHealth;
     }
