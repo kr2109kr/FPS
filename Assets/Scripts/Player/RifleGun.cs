@@ -21,7 +21,9 @@ public class RifleGun : MonoBehaviour
 
     [SerializeField] private Text ammoDisplay;
 
-    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private AudioClip gunShotAudioClip;
+    [SerializeField] private AudioClip reloadingAudioClip;
+    [SerializeField] private AudioClip reloadAudioClip;
 
     private AudioSource audioSource;
 
@@ -38,7 +40,7 @@ public class RifleGun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && bulletLeft > 0)
+        if (Input.GetButtonDown("Fire1") && bulletLeft > 0 && !isReloading)
         {
             Shoot();
         }
@@ -57,8 +59,8 @@ public class RifleGun : MonoBehaviour
 
     private void Shoot()
     {
-        audioSource.pitch = Random.Range(0.95f, 1.05f);
-        audioSource.PlayOneShot(audioClip);
+        audioSource.pitch = Random.Range(0.85f, 0.95f);
+        audioSource.PlayOneShot(gunShotAudioClip);
 
         muzzleFlashEffect.Play();
 
@@ -86,6 +88,8 @@ public class RifleGun : MonoBehaviour
 
     private void Reload()
     {
+        audioSource.pitch = 0.9f;
+        audioSource.PlayOneShot(reloadingAudioClip);
         isReloading = true;
         Invoke("ReloadCompleted", reloadTime);
 
@@ -94,6 +98,8 @@ public class RifleGun : MonoBehaviour
 
     private void ReloadCompleted()
     {
+        audioSource.pitch = 0.9f;
+        audioSource.PlayOneShot(reloadAudioClip);
         bulletLeft = magazineSize;
         isReloading = false;
     }
