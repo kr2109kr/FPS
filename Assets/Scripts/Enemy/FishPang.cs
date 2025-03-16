@@ -14,6 +14,12 @@ public class FishPang : Enemy
     [SerializeField] private Vector3 firePoint;
 
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip shotAudioClip;
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -29,29 +35,32 @@ public class FishPang : Enemy
         if (hitColliders.Length != 0)
         {
             transform.LookAt(hitColliders[0].transform);
-        }
 
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
-        {
-            if(!isCharging)
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
+            {
+                if (!isCharging)
                 {
-                chargeEffect.Play();
-                isCharging = true;
-            }
+                    chargeEffect.Play();
+                    isCharging = true;
+                }
 
                 else
-            {
-                if (chargeEffect.isStopped)
                 {
-                    FireWeapon();
-                    isCharging = false;
+                    if (chargeEffect.isStopped)
+                    {
+                        FireWeapon();
+                        isCharging = false;
+                    }
                 }
             }
         }
+
     }
 
     private void FireWeapon()
     {
+        audioSource.PlayOneShot(shotAudioClip);
+
         GameObject bullet = Instantiate(bulletPrefab, transform.position + firePoint, transform.rotation);
 
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletVelocity, ForceMode.Impulse);

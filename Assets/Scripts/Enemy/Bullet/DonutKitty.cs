@@ -17,8 +17,17 @@ public class DonutKitty : Enemy
     [SerializeField] private Vector3 firePoint;
     [SerializeField] private GameObject bullerPrefab;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip shotAudioClip;
+
     private bool isCharging;
     Coroutine shootCoroutine;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
 
     private void Start()
     {
@@ -68,10 +77,8 @@ public class DonutKitty : Enemy
 
     private void Shoot(Transform bullet)
     {
+        audioSource.PlayOneShot(shotAudioClip);
         Transform bulletTransform = Instantiate(bullet, transform.localPosition + firePoint, transform.rotation);
-        
-
-
     }
 
 

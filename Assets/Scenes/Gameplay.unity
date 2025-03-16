@@ -270,6 +270,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3868539524656322422, guid: c58b826c62028a247922409e9deb14cc, type: 3}
   m_PrefabInstance: {fileID: 253062104}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &328206644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328206645}
+  m_Layer: 0
+  m_Name: Cake Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &328206645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328206644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1112267121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &340287044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368,14 +399,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1979479820}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: sightRange
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: attackRange
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5310254324140908112, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_Name
       value: Donut Kitty (2)
@@ -454,14 +477,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1979479820}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: sightRange
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: attackRange
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5310254324140908112, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_Name
       value: Donut Kitty (4)
@@ -1044,6 +1059,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 976217432}
     m_Modifications:
+    - target: {fileID: 287381936598961527, guid: 52249a94b4a58694f96a690395817b05, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 287381936598961527, guid: 52249a94b4a58694f96a690395817b05, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 831718229087183217, guid: 52249a94b4a58694f96a690395817b05, type: 3}
       propertyPath: player
       value: 
@@ -1784,14 +1807,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1979479820}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: sightRange
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: attackRange
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5310254324140908112, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_Name
       value: Donut Kitty (5)
@@ -1966,6 +1981,7 @@ Transform:
   - {fileID: 2107813165}
   - {fileID: 808162585}
   - {fileID: 976217432}
+  - {fileID: 328206645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112267122
@@ -2646,14 +2662,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1979479820}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: sightRange
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: attackRange
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5310254324140908112, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_Name
       value: Donut Kitty (3)
@@ -2968,14 +2976,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1979479820}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: sightRange
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: attackRange
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5310254324140908112, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_Name
       value: Donut Kitty
@@ -2984,6 +2984,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 7393903379960196334, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393903379960196334, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9141934481032093099, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.21
@@ -3728,14 +3736,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1979479820}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: sightRange
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413099795423891448, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
-      propertyPath: attackRange
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5310254324140908112, guid: cfd8ccde5395480438c2ba04d8c12605, type: 3}
       propertyPath: m_Name
       value: Donut Kitty (1)
@@ -3840,7 +3840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921573727144790690, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 1303539524171668770, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
@@ -3864,15 +3864,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1911006075695805444, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2018025168182185898, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2116755746809846799, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2142276709015216589, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
@@ -3888,11 +3888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2576057246505935555, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2793246024625173411, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3131331454462295543, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
@@ -3916,7 +3916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3945766991592087573, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4143145035934164287, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
@@ -3952,7 +3952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5579230668905332665, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5787199026648845981, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
@@ -3980,7 +3980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034587875691317252, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7091556009652383401, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
@@ -4068,7 +4068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8221217118592386147, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8263615305308595078, guid: 912f3266e1bf7944babba13bea1b2ed8, type: 3}
       propertyPath: m_TagString

@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    protected void Die()
+    protected virtual void Die()
     {
         Destroy(gameObject);
         EnemyManager.Instance.EnemyCountDecrease();

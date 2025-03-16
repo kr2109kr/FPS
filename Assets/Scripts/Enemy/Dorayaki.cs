@@ -11,8 +11,19 @@ public class Dorayaki : Enemy
 
     [SerializeField] private bool isDetonated;
 
+    private CapsuleCollider capsuleCollider;
+
 
     [SerializeField] private ParticleSystem detonationEffect;
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip detonationAudioClip;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
+    }
 
     private void Start()
     {
@@ -28,7 +39,7 @@ public class Dorayaki : Enemy
         {
             if (!isDetonated)
             {
-                Detonation();
+                Die();
             }
             
         }
@@ -42,7 +53,7 @@ public class Dorayaki : Enemy
         {
             if (detonationEffect.isStopped)
             {
-                Die();
+                EnemyManager.Instance.EnemyCountDecrease();
                 Destroy(gameObject);
             }
         }
@@ -50,6 +61,7 @@ public class Dorayaki : Enemy
 
     private void Detonation()
     {
+        audioSource.PlayOneShot(detonationAudioClip);
         detonationEffect.Play();
 
         GetComponent<MeshRenderer>().enabled = false;
@@ -62,6 +74,14 @@ public class Dorayaki : Enemy
             hitColliders_2[0].GetComponent<Player>().TakeDamage(damage);
         }
 
+        base.healthBar.gameObject.SetActive(false);
+        capsuleCollider.enabled = false;
+
     }
 
+
+    protected override void Die() 
+    {
+        Detonation();
+    }
 }
